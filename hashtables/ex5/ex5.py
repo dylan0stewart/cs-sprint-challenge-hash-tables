@@ -21,7 +21,7 @@ def finder(files, queries):
     for query in queries: # for each query
         if query in cache: # if the query(aka filename) is in the cache(from the above if statement), append query to the results list
             listed_results.append(cache[query]) 
-      results = [] # instantiate results
+    results = [] # instantiate results
 
     for sublist in listed_results: # for each list in the list of results
         for item in sublist: # check through those lists, appending each item to the results list

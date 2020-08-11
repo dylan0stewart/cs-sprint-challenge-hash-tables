@@ -23,11 +23,26 @@ Commit your code regularly and meaningfully. This practice helps both you (in ca
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your answers beforehand.
 
 1. Hashing functions
+    Hashing functions basically 'compress' data, and use a key to find it later. Essentially for a hash table to be worth it. They should be efficient computationally and should evenly distribute the keys; need to be efficient because otherwise why use one, and they need to evenly distribute keys so that they can/will still be distinct
+
 2. Collision resolution
+    Collision Resolution is simply an algorithmic approach to handle situations where two or more items should be kept in the same spot.
+    An example: one method for conflict resolution is simply starting at the original hash value location, and moving sequentially through until an empty slot is found.
+
 3. Performance of basic hash table operations
+    Average is O(1 + a); this is because there is always the initial cost involved. If you can control the load factor,, you can keep operations at O(1)
+
 4. Load factor
+    Basically just how full a Hash table is. Number of inputs divided by number of slots. A good default can be something like 0.75, because of the trade-off between time and space costs. Basically you dont want to have a ton of unused slots, but you also dont want to accidentally max/cap, or it either breaks or is super inefficient.
+
 5. Automatic resizing
+    Essentially triggering a complete resize whenever the load factor passes the set threshold. A new table is made, everything is copied over, then the old one is emptied and returned to free storage.
+    Incremental Resizing is a good way to deal with some of the issues that could come with needing to resize the entire thing at once(too much data, etc); basically its resizing in chunks so it can be making smaller changes consistently, rather than one full change all at once.
+
 6. Various use cases for hash tables
+    A great example I saw somehwere was coordinates for a map- huge amount of data, that would be much faster to search through if it was indexed instead.
+    Another common one is any time you need to index items in an array or list.
+
 
 We expect you to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade.
 
